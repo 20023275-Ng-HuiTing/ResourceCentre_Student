@@ -168,6 +168,7 @@ public class ResourceCentre {
 	}
 
 	//================================= Option 2 Add an item (CRUD - Create) =================================
+	//HuiTing
 	public static Camcorder inputCamcorder() {
 		String tag = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("Enter description > ");
@@ -183,14 +184,20 @@ public class ResourceCentre {
 		System.out.println("Camcorder added");
 	}
 	
-	public static Chromebook inputChromebook() {	
-		Chromebook cb =null;
+	public static Chromebook inputChromebook() {
 		// write your code here
+		String tag = Helper.readString("Enter asset tag > ");
+		String description = Helper.readString("Enter description > ");
+		String os = Helper.readString("Enter operating system > ");
+		
+		Chromebook cb = new Chromebook(tag, description, os);
 		return cb;
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
 		// write your code here
+		chromebookList.add(cb);
+		System.out.println("Chromebook added");
 	}
 	
 	//================================= Option 3 Loan an item (CRUD - Update) =================================
